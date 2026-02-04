@@ -31,7 +31,7 @@ def get_weather(city: str):
     dict: weather details in json format
     """
     try:
-        api_key="698a6415430c01be268ea0c98d2c674e"
+        api_key="your_api_key"
         url= f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
         response =requests.get(url)
         return response.json()
@@ -81,7 +81,7 @@ def get_news(topic: str):
     topic(str):topic top search news for(eg- technology , cricket etc)
     """
     try:
-        api_key="eed15887b8e641608dfbc2203942317c"
+        api_key="YOUR_API_KEY"
         url= f"https://newsapi.org/v2/everything?q={topic}&apiKey={api_key}&pageSize=5&sortBy=publishedAt"
         response =requests.get(url)
         return response.json().get("articles",[])
@@ -145,7 +145,7 @@ def find_local_events(city: str):
     """
 
     try:
-        api_key="92fae194b1048ba0950a35d3cb64e9bb08a0a829459de580c5ececd740f97005"
+        api_key="YOUR_API_KEY"
         url= f"https://serpapi.com/search.json?engine=google_events&q=Events in {city}&api_key={api_key}"
         response =requests.get(url)
         return response.json()
